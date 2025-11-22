@@ -23,3 +23,6 @@ This is a servcie booking app built with React Native and TypeScript using Expo.
 
 ## Assumptons
 - No backend requred for this prototype
+
+## Demo
+<video src="https://github.com/user-attachments/assets/be3c20c6-bfc8-46d7-be16-6faf1bf72d17" width=300/>
