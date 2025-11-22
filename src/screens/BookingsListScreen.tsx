@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { View, Text, FlatList, TouchableOpacity, Alert, StyleSheet, RefreshControl, TextInput } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationProp, useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { MainTabParamList } from '../navigation/types';
@@ -85,7 +86,7 @@ const BookingsListScreen: React.FC<Props> = ({ navigation }) => {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Your Bookings</Text>
 
       {/* Search Input */}
@@ -133,7 +134,7 @@ const BookingsListScreen: React.FC<Props> = ({ navigation }) => {
           }
         />
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -16,9 +16,16 @@ const ServicesStack = createNativeStackNavigator<ServicesStackParamList>();
 const ServicesStackNavigator: React.FC = () => {
   return (
     <ServicesStack.Navigator>
-      <ServicesStack.Screen name="ServicesList" component={ServicesListScreen} />
-      <ServicesStack.Screen name="ServiceDetails" component={ServiceDetailsScreen} />
-      <ServicesStack.Screen name="BookingForm" component={BookingFormScreen} />
+      <ServicesStack.Screen
+        name='ServicesList'
+        component={ServicesListScreen}
+        options={{ headerShown: false }}
+      />
+      <ServicesStack.Screen
+        name='ServiceDetails'
+        component={ServiceDetailsScreen}
+      />
+      <ServicesStack.Screen name='BookingForm' component={BookingFormScreen} />
     </ServicesStack.Navigator>
   );
 };

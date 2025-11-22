@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
@@ -30,7 +31,7 @@ const ProfileScreen: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Profile</Text>
       <View style={styles.profileCard}>
         <Ionicons name="person-circle-outline" size={100} color={Colors.light.primary} style={styles.profileIcon} />
@@ -42,7 +43,7 @@ const ProfileScreen: React.FC = () => {
         <Ionicons name="log-out-outline" size={24} color={Colors.light.danger} />
         <Text style={styles.logoutText}>Logout</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 

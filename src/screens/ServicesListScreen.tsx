@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { ServicesStackParamList } from '../navigation/types';
@@ -51,7 +52,7 @@ const ServicesListScreen: React.FC<Props> = ({ navigation }) => {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Available Services</Text>
 
       {loading ? (
@@ -75,7 +76,7 @@ const ServicesListScreen: React.FC<Props> = ({ navigation }) => {
           showsVerticalScrollIndicator={false}
         />
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 
